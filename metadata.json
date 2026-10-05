@@ -1,0 +1,12 @@
+{
+  "name": "VISION_AI",
+  "description": "Voice-first assistive PWA for blind and low-vision users featuring real-time AI object detection, turn-by-turn navigation, and continuous Gemini voice brain.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

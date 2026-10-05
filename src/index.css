@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Accessible High Contrast Mode (Black / Yellow AAA WCAG) */
+.high-contrast {
+  background-color: #000000 !important;
+  color: #FACC15 !important;
+}
+
+.high-contrast .bg-white,
+.high-contrast .bg-slate-50,
+.high-contrast .bg-blue-50 {
+  background-color: #000000 !important;
+  color: #FACC15 !important;
+  border-color: #FACC15 !important;
+}
+
+.high-contrast .text-slate-900,
+.high-contrast .text-slate-800,
+.high-contrast .text-slate-700,
+.high-contrast .text-slate-600,
+.high-contrast .text-slate-500 {
+  color: #FACC15 !important;
+}
+
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+  background-color: #000000 !important;
+  color: #FACC15 !important;
+  border-color: #FACC15 !important;
+}
+
+/* Large Text Mode */
+.large-text {
+  font-size: 1.12rem !important;
+}
+
+.large-text button,
+.large-text input,
+.large-text p,
+.large-text span {
+  font-size: 1.1em;
+}
+
+/* Leaflet Container Stacking */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  z-index: 0;
+}
+
+.leaflet-pane {
+  z-index: 10 !important;
+}
+
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 15 !important;
+}
+
+/* Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
